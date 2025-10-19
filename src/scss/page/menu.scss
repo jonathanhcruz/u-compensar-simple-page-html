@@ -1,0 +1,68 @@
+.menu {
+    background: $white;
+    padding: 5px 0;
+    border-bottom: 1px solid $border-color;
+    align-content: center;
+    height: 65px;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 0 20px;
+    } 
+
+    &__logo {
+        width: 100%;
+        max-width: 200px;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__nav {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    &__list {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+    }
+
+    &__item {
+        padding: 10px 0;
+        transition: 0.3s;
+    }
+
+    &__link {
+        color: $primary-color;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        padding: 4px 7px;
+        
+        &:hover {
+            color: $white;
+            background-color: $primary-color;
+        }
+
+        &--contact {
+            background-color: $button-bg;
+            color: $white;
+            font-weight: bold;
+
+            &:hover {
+                background-color: darken($button-bg, 10%);
+                color: $white;
+            }
+        }
+    }
+    
+}

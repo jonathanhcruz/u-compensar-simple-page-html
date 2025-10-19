@@ -1,0 +1,20 @@
+{
+  "name": "u-compensar-simple-page-html",
+  "version": "1.0.0",
+  "description": "A simple HTML project with SCSS and automatic reload",
+  "main": "index.html",
+  "scripts": {
+    "dev": "concurrently \"npm run watch-css\" \"npm run serve\"",
+    "watch-css": "sass --watch src/scss:src/css --style expanded",
+    "build-css": "sass src/scss:src/css --style compressed",
+    "serve": "live-server src --port=3000 --open=/index.html"
+  },
+  "keywords": ["html", "scss", "frontend"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.5",
+    "live-server": "^1.2.2",
+    "concurrently": "^8.2.2"
+  }
+}
