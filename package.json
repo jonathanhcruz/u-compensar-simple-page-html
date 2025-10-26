@@ -6,8 +6,13 @@
   "scripts": {
     "dev": "concurrently \"npm run watch-css\" \"npm run serve\"",
     "watch-css": "sass --watch src/scss:src/css --style expanded",
-    "build-css": "sass src/scss:src/css --style compressed",
-    "serve": "live-server src --port=3000 --open=/index.html"
+    "build-css": "sass src/scss:build/css --style=compressed",
+    "build-js": "esbuild src/js/main.js --bundle --minify --sourcemap=false --outfile=build/js/main.js",
+    "serve": "live-server src --port=3000 --open=/index.html",
+    "clean": "rm -rf build",
+    "copy": "mkdir -p build && cp src/*.html build/ && cp -R src/img build/img",
+    "build": "node scripts/build.js",
+    "serve-build": "live-server build --port=4000 --open=/index.html"
   },
   "keywords": ["html", "scss", "frontend"],
   "author": "",
@@ -15,6 +20,7 @@
   "devDependencies": {
     "sass": "^1.69.5",
     "live-server": "^1.2.2",
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "esbuild": "^0.18.20"
   }
 }
