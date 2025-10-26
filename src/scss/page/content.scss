@@ -36,7 +36,9 @@
             padding: 10px 18px 9px 18px;
             background-color: $button-bg;
             color: $white;
-            width: 250px;
+            width: 100%;
+            max-width: 250px;
+            border: none;
         }
     }
 
@@ -45,5 +47,60 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        img {
+          width: 100%;
+        }
     }
+
+  @include desktop {
+    &__link {
+      font-size: 12px;
+    }
+
+    .info {
+      &__title {
+        font-size: 35px;
+      }
+
+      &__description {
+        font-size: 20px;
+      }
+
+      &__button {
+        font-size: 20px;
+        padding: 5px 10px 5px 10px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  @include tablet {
+    &__container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @include mobile {
+    &__container {
+      padding: 20px 10px;
+    }
+
+    .info {
+      &__title {
+        font-size: 28px;
+      }
+
+      &__description {
+        font-size: 16px;
+      }
+
+      &__button {
+        font-size: 16px;
+        padding: 5px 10px 5px 10px;
+        margin-top: 15px;
+        max-width: 200px;
+      }
+    }
+  }
 }

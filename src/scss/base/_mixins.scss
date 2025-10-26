@@ -12,13 +12,13 @@
 }
 
 @mixin desktop {
-  @media (min-width: #{$desktop}) {
+  @media (max-width: #{$desktop}) {
     @content;
   }
 }
 
 @mixin large-desktop {
-  @media (min-width: #{$large-desktop}) {
+  @media (max-width: #{$large-desktop}) {
     @content;
   }
 }
