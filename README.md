@@ -4,11 +4,9 @@ A modern, clean HTML landing page project with SCSS architecture and automatic d
 
 ## Features
 
-- 🎨 **Clean Modern Design** - Minimalist layout with professional styling
 - 📱 **Responsive Grid Layout** - Two-column design that adapts to different screen sizes
 - 🔧 **Modular SCSS Architecture** - Organized with BEM methodology and component-based structure
-- 🔄 **Live Development Server** - Automatic page reload and CSS compilation during development
-- ⚡ **Sass Compilation** - Automatic SCSS to CSS compilation with source maps
+- ⚡  **Sass Compilation** - Automatic SCSS to CSS compilation with source maps
 - 🖼️ **Image Assets** - Includes logo and illustration graphics
 - 🎯 **Component-Based Styling** - Separate SCSS files for menu and content sections
 
@@ -16,29 +14,29 @@ A modern, clean HTML landing page project with SCSS architecture and automatic d
 
 ```
 src/
-├── index.html              # Main HTML page with menu and content sections
-├── css/                    # Compiled CSS files (auto-generated, git-ignored)
+├── index.html             # Main HTML page with menu and content sections
+├── css/                   # Compiled CSS files (auto-generated, git-ignored)
 │   ├── main.css           # Main compiled stylesheet
 │   ├── main.css.map       # Source map for debugging
-│   └── page/              # Individual page component CSS
+│   └── Components/        # Individual component CSS
 │       ├── content.css    # Content section styles
 │       ├── content.css.map
 │       ├── menu.css       # Navigation menu styles  
 │       └── menu.css.map
 ├── scss/                   # SCSS source files
-│   ├── main.scss          # Main SCSS entry point with imports
-│   ├── base/              # Base styles and configuration
-│   │   ├── _base.scss     # Base HTML element styles
-│   │   ├── _mixins.scss   # Reusable SCSS mixins
+│   ├── main.scss           # Main SCSS entry point with imports
+│   ├── base/               # Base styles and configuration
+│   │   ├── _base.scss      # Base HTML element styles
+│   │   ├── _mixins.scss    # Reusable SCSS mixins
 │   │   └── _variables.scss # Design tokens (colors, spacing, typography)
-│   └── page/              # Page-specific component styles
-│       ├── content.scss   # Main content area and info section
-│       └── menu.scss      # Navigation menu and logo
-├── img/                   # Image assets
-│   ├── illustration.png   # Main content illustration
-│   └── logo.png          # U Compensar logo
+│   └── Componets/          # Page-specific component styles
+│       ├── content.scss    # Main content area and info section
+│       └── menu.scss       # Navigation menu and logo
+├── img/                    # Image assets
+│   ├── illustration.png    # Main content illustration
+│   └── logo.png            # U Compensar logo
 └── js/
-    └── main.js            # JavaScript functionality
+    └── main.js             # JavaScript functionality
 ```
 
 ## Design Overview
@@ -105,7 +103,7 @@ The project follows a modular SCSS architecture:
 - **`_mixins.scss`** - Reusable SCSS mixins for common patterns
 - **`_base.scss`** - Global styles, resets, and base HTML element styling
 
-#### Page Layer (`src/scss/page/`)
+#### Page components (`src/scss/components/`)
 - **`menu.scss`** - Navigation header with logo and menu items
   - Grid layout (200px logo column + flexible nav)
   - Responsive menu design
@@ -127,8 +125,8 @@ The project follows a modular SCSS architecture:
    - Update breakpoints for responsive behavior
    
 3. **Components**: Edit individual component files
-   - `src/scss/page/menu.scss` for navigation styling
-   - `src/scss/page/content.scss` for main content layout
+   - `src/scss/components/menu.scss` for navigation styling
+   - `src/scss/componets/content.scss` for main content layout
    
 4. **Content**: Update `src/index.html`
    - Replace logo and illustration in `src/img/`
@@ -138,7 +136,7 @@ The project follows a modular SCSS architecture:
 
 ### File Organization Benefits
 - **Maintainable**: Each component has its own SCSS file
-- **Scalable**: Easy to add new pages/components
+- **Scalable**: Easy to add new components
 - **Readable**: Clear separation of concerns
 - **Efficient**: Automatic compilation and source maps for debugging
 
@@ -156,33 +154,3 @@ The project follows a modular SCSS architecture:
 The `.gitignore` is configured to exclude:
 - `node_modules/` - Dependencies  
 - `src/css/*` - Compiled CSS files (auto-generated)
-- System files (`.DS_Store`, logs, etc.)
-- IDE settings (`.vscode/`)
-
-This ensures only source files are tracked, keeping the repository clean.
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest) 
-- Safari (latest)
-- Edge (latest)
-- Modern browsers with CSS Grid and Flexbox support
-
-## Next Steps & Enhancements
-
-Consider adding:
-- 📱 Mobile-first responsive breakpoints
-- 🎭 CSS animations and micro-interactions
-- 🔍 SEO meta tags and structured data
-- ♿ Accessibility improvements (ARIA labels, focus states)
-- 🖼️ Optimized image formats (WebP, responsive images)
-- 📦 Build process for production deployment
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-**Built with ❤️ for U Compensar** - A modern, maintainable approach to web development using SCSS and live development tools.
