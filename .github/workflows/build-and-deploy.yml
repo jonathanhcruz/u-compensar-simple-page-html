@@ -40,11 +40,11 @@ jobs:
       - name: Run build (create production files in build/)
         run: npm run build
 
-      - name: Deploy to GitHub Pages (gh-pages)
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v2
         with:
-          folder: build
-          branch: gh-pages
-          clean: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          path: build
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
 
